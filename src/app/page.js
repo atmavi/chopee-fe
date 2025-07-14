@@ -29,7 +29,7 @@ export default function Home() {
   }, [limit, skip, search]);
 
   return (
-    <CartProvider>
+    <>
       <Header />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -63,7 +63,7 @@ export default function Home() {
           onPageChange={(newSkip) => setSkip(newSkip)}
         />
       </main>
-    </CartProvider>
+    </>
     
   );
 }
