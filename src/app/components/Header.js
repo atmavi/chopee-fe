@@ -5,7 +5,7 @@ export default function Header() {
   const { cartItems } = useCart();
 
   return (
-    <header className="bg-yellow-600 text-white px-6 py-4 shadow-md">
+    <header className="sticky top-0 z-50 bg-yellow-600 text-white px-6 py-4 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold">MyStore</Link>
         <Link href="/cart" className="flex items-center gap-2">
