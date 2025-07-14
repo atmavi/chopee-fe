@@ -1,20 +1,24 @@
 export default function ProductCard({ product }) {
   return (
-    <div className="border rounded p-4 shadow hover:shadow-md transition">
+    <div className="border rounded-xl p-4 shadow-sm hover:shadow-lg transition duration-200 bg-white">
       <img
         src={product.thumbnail}
         alt={product.title}
-        className="w-full h-40 object-cover rounded"
+        className="w-full h-48 object-cover rounded-md"
       />
-      <h2 className="text-lg font-semibold mt-2">{product.title}</h2>
-      <p className="text-sm text-gray-600">Brand: {product.brand}</p>
-      <p className="text-sm text-gray-600">Category: {product.category}</p>
-      <p className="text-sm text-green-700 font-medium mt-1">${product.price}</p>
-      <p className="text-sm">Rating: {product.rating} ⭐</p>
-      <p className="text-sm">Stock: {product.stock}</p>
-      <p className="text-xs text-gray-500 mt-1">
-        Shipping Info: Free delivery within 3-5 days.
-      </p>
+      <div className="mt-4 space-y-1">
+        <h2 className="text-lg font-semibold">{product.title}</h2>
+        <p className="text-sm text-gray-500">{product.brand} • {product.category}</p>
+        <p className="text-xl font-bold text-green-600">${product.price}</p>
+        <p className="text-sm text-yellow-600">⭐ {product.rating}</p>
+        <p className="text-sm text-gray-600">Stock: {product.stock}</p>
+        <p className="text-xs text-gray-400 mt-2">
+          Shipping Info: Free delivery within 3–5 days.
+        </p>
+      </div>
+      <button className="mt-4 w-full py-2 bg-yellow-600 text-white rounded hover:bg-yellow-700 transition">
+        Add to Cart
+      </button>
     </div>
   );
 }
