@@ -12,7 +12,7 @@ export default function ProductCard({ product }) {
         <p className="text-xl font-bold text-green-600">${product.price}</p>
         <p className="text-sm text-yellow-600">⭐ {product.rating}</p>
         <p className="text-sm">Stock: {product.stock}</p>
-        <p className="text-xs text-gray-400">Shipping Info: Free delivery within 3–5 days.</p>
+        <p className="text-xs text-gray-400">{product.shippingInformation}</p>
       </div>
       <button
         onClick={() => addToCart(product)}
