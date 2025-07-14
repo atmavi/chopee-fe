@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useCart } from '../context/CartContext';
 
 export default function Header() {
-  const { cartItems } = useCart();
+  const { totalQuantity } = useCart();
 
   return (
     <header className="sticky top-0 z-50 bg-yellow-600 text-white shadow-md">
@@ -19,7 +19,7 @@ export default function Header() {
           <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
             <path d="M7 4h-2l-1 2h2l4.5 9h6.25l3.25-6H9.42" />
           </svg>
-          <span className="text-sm">Cart ({cartItems.length})</span>
+          <span className="text-sm">Cart ({totalQuantity})</span>
         </Link>
       </div>
     </header>
